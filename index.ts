@@ -1,7 +1,7 @@
 const gitAsync = require('simple-git/promise');
 
 (async function() {
-  const packages = [ 'common', 'build', 'server' ]
+  const packages = [ 'common', 'build', 'server', 'task' ]
 
   Promise.all(packages.map(package => {
     const pkg = gitAsync(`./packages/${package}`);
