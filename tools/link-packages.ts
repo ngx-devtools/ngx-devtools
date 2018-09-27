@@ -16,7 +16,7 @@ async function symlinkPackages(src, dest) {
     : Promise.resolve()
   ).then(() => {
     mkdirp(dirname(dest))
-    return symlinkAsync(src, dest, 'dir');
+    return symlinkAsync(join(resolve(), src), dest, 'dir');
   })
 }
 
